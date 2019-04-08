@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html;charset=UTF-8" http-equiv="content-type" />
+  <meta content="width=device-width" name="viewport" />
+  <title>Web Monetization</title>
+  <link rel="stylesheet" href="../template/AC-2019-slides.css" />
+  <link rel="alternate stylesheet" title="Photo banner" href="../template/alt.css" />
+  <link rel="alternate stylesheet" title="AC logo" href="../template/alt2.css" />
+  <link rel="alternate stylesheet" title="Watercolor" href="../template/alt3.css" />
+  <script src="../template/shower.min.js" type="text/javascript"></script>
+  <style>
+    blockquote {
+      font-size: larger;
+      font-style: italic;
+    }
+  </style>
+ </head>
+ <body class="shower fade-in">
+
+  <div class="comment">
+   <p>This is a template for slides for <a href="/2019/04/AC/">AC
+   2019</a>. For <a href="Overview.html#manual" >usage
+   instructions</a>, see at the end.</p>
+  </div>
+
+  <div class="progress">
+  </div>
+
+  <div class="slide cover clear" id="start">
+   <h1>Web Monetization</h1>
+   <p>An new business model for the Web</p>
+   <address>Adrian Hope-Bailie<br>adrian@coil.com)</address>
+  </div>
+
+
+  <div class="slide" id="no-pay">
+    <h1>The Internet Economy is Incomplete</h1>
+    <img class="side"
+   src="./no-way-to-pay.png"
+   alt="[Picture of content from client but no way to pay server]" />
+   <p><strong>Today:</strong> The Web is a <em>Barter Economy</em></p>
+   </div>
+ 
+   <div class="slide side r" id="barter">
+    <h1>Barter is Extremely Inefficient</h1>
+    <img class="side"
+    src="./william-jevons.png"
+    alt="[Picture of William Jevons]" />
+    <blockquote>
+      There may be many people wanting,
+      and many possessing those things
+      wanted; but to allow of an act of barter,
+      there must be a <em>double coincidence</em>,
+      which will rarely happen.
+    </blockquote>
+    <p>- William S. Jevons, 1875</p>     
+   </div>
+ 
+  <div class="slide" id="money-solves-barter">
+    <h1>Money: Solves the Barter Problem</h1>
+    <img class="side"
+   src="./streaming-payments.png"
+   alt="[Picture of content from client but no way to pay server]" />
+   <p><strong>Money:</strong> Better than Barter Since 5000 BC</p>
+   </div>
+ 
+  <div class="slide" id="fixed-costs">
+    <h1>Fixed Costs Make Micropayments Unviable</h1>
+    <img class="side"
+   src="./cost-graph.png"
+   alt="[Graph of payments costs vs tx size]" />
+  </div>
+
+  <div class="slide" id="money-solves-barter">
+      <h1>We Use "Hacks" to Get Around the Problem</h1>
+      <img class="side"
+     src="./indirect-payments.png"
+     alt="[Picture of content from client but indirect payments to server]" />
+     <p><strong>Hacks:</strong> Advertising, subscriptions, surveys, bundling</p>
+  </div>
+    
+  <div class="slide" id="ny-times">
+      <img class="cover"
+     src="./ny-times.png"
+     alt="[Picture of NY Times front page covered mostly in ads]" />
+  </div>
+       
+  <div class="slide" id="ad-blockers">
+      <h1>Users are opting out of this model</h1>
+        <img src="./add-block.png"
+       alt="[Graph of ad-block usage]" />
+  </div>
+         
+  <div class="slide" id="marketplaces">
+      <h1>Subscriptions & marketplaces</h1>
+        <img src="./marketplace.png"
+        alt="[Diagram of a marketplace where the marketplace itself takes a significant cut]" />
+        <p>Creators are at the mercy of the marketplace</p>
+  </div>
+           
+  <div class="slide" id="interledger">
+      <h1>Interledger makes micro-payments viable</h1>
+      <img
+      src="./interledger.png"
+      alt="[Picture of content from client and payments via Interledger to pay server]" />
+      <p>Streaming Payments using Interledger allows for transfers of tiny amounts</p>
+  </div>
+
+   <div class="slide" id="6-billion">
+     <h1>Does Interledger work?</h1>
+      <p>Since Q4 2018, Coil has processed almost</p>
+      <p class="shout">6 billion payments</p>
+    <p>during an invite-only, closed beta</p>
+    <p style="font-size: 4em; text-align: right">✅</p>
+  </div>
+
+  <!--
+  <div class="slide" id="demos">
+   <h1>Demos</h1>
+   <ul>
+    <li>Coil extension paying to <strong>Room.sh</strong></li>
+    <li class="next">Live counter on Bithomp</li>
+    <li class="next">Micro-payments built into Puma browser</li>
+   </ul>
+  </div>
+  -->
+  <div class="slide" id="how-does-it-work">
+      <h1>How does it work?</h1>
+      <p>Websites use a meta tag with a pointer to their wallet</p>
+      <pre class="numbered">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;meta charset="utf-8">
+&lt;meta name="monetization" content="$ilp.gatehub.net/435259649">
+      </pre>
+      <p>Coil's extension pays the website while the window is in focus</p>
+  </div>
+
+  <div class="slide" id="room-sh">
+      <img class="fit"
+     src="./room.sh.png"
+     alt="[Screenshot of room.sh website showing monetization]" />
+     <address>https://room.sh</address>
+  </div>
+       
+  <div class="slide" id="bithomp">
+      <img class="fit"
+     src="./bithomp.png"
+     alt="[Screenshot of puma browser.com website showing monetization]" />
+     <address>https://bithomp.com</address>
+  </div>
+       
+  <div class="slide side r" id="puma">
+      <img class="side"
+     src="./pumabrowser-app.png"
+     alt="[Picture of puma browser app showing monetization]" />
+     <address>https://www.pumabrowser.com/</address>
+     <p>Puma is browser has monetization built-in.</p>
+     
+  </div>
+       
+  <div class="slide" id="how-it-should-work">
+      <h1>How it should work...</h1>
+      <ul>
+          <li>Provider of Streaming Payments is registered with PaymentHandler API</li>
+          <li class="next">Websites call PaymentRequest API to request a stream</li>
+          <li class="next">Non-interactive payment flows are allowed by the API</li>
+          <li class="next">User is aware that payments are streaming</li>
+          <li class="next">Join us in <strong>Web Payments WG</strong></li>
+      </ul>
+  </div>
+  <div class="slide" id="icons">
+    <p>some UI ideas...</p>
+      <img class="fit"
+      src="./streaming-icon.png"
+      alt="[Picture of streaming icon designs]" />
+  </div>
+
+  <div class="slide cover clear" id="end">
+   <h1>Thank you!</h1>
+   <p><strong>Web Payments WG</strong></p>
+   <p>Email me for an access code for the Coil Beta to test it yourself</p>
+   <address>adrian@coil.com</address>
+  </div>
+
+  <!--=============================================================
+			     User manual
+  ==============================================================-->
+
+  <div class="comment" id="manual">
+   <h2>Setting up your slides</h2>
+
+   <p>This is a template for slides for <a href="/2019/04/AC/">AC
+   2019</a>. It uses either the <a href="http://shwr.me/">Shower</a>
+   script (version 2.1.0) or the <a
+   href="https://www.w3.org/Talks/Tools/b6plus/" >b6+</a> script for
+   the presentation and has a style sheet based on the AC 2019 visual
+   style.</p>
+
+   <p>If you write slides for AC 2019, you can either put them online
+   or download a zip with everything needed to present offline, as
+   explained below.</p>
+
+   <h3>Developing slides online</h3>
+
+   <p>If you develop your slides <strong>online</strong> (or in CVS),
+   then make a directory under <a
+   href="https://www.w3.org/2019/Talks/ac-slides/"
+   >https://www.w3.org/2019/Talks/ac-slides/</a>. Copy the <a
+   href="https://www.w3.org/2019/Talks/ac-slides/template/Overview.html"
+   >Overview.html</a> from <a
+   href="https://www.w3.org/2019/Talks/ac-slides/template/"
+   >https://www.w3.org/2019/Talks/ac-slides/template/</a> into your
+   directory and edit the content, or just use is as an example.</p>
+
+   <h3>Developing slides offline</h3>
+
+   <p>If you develop your slides <strong>offline</strong> (or plan to
+   present them without a network), then download this <a
+   href="https://www.w3.org/2019/Talks/ac-slides/template/AC-2019-slides-template.zip"
+   >zip file</a>. Unpacking it creates the following directories and
+   files:</p>
+
+   <ul class="tree">
+     <li><code><strong>AC-2019/</strong></code><br />
+      │</li>
+     <li> └─ <code><strong>template/</strong></code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/Overview.html"
+     >Overview.html</a> (this file)</code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/shower.min.js"
+     >shower.min.js</a> (a JavaScript file)</code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/AC-2019-slides.css"
+     >AC-2019-slides.css</a> (a CSS file)</code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/AC-2019-slides-banner.svg"
+     >AC-2019-slides-banner.svg</a> (an SVG image)</code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/AC-2019-slides-banner.png"
+     >TPAC-2019-slides-banner.png</a> (a PNG image)</code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/linen.png"
+     >linen.png</a> (a PNG image)</code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/ramp.png"
+     >ramp.png</a> (a PNG image)</code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/Gill_Sans_Italic.woff"
+     >Gill_Sans_Italic.woff</a> (a Web font)</code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/Gill_Sans.woff"
+     >Gill_Sans.woff</a> (a Web font)</code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/Gill_Sans_Bold.woff"
+     >Gill_Sans_Bold.woff</a> (a Web font)</code><br />
+          │</li>
+     <li>     ├─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/Gill_Sans_Italic.woff"
+     >Gill_Sans_Italic.woff</a> (a Web font)</code><br />
+          │</li>
+     <li>     └─ <code><a
+     href="https://www.w3.org/2019/Talks/ac-slides/template/League_Gothic-webfont.woff"
+     >League_Gothic-webfont.woff</a> (a Web font)</code></li>
+   </ul>
+
+   <p>Make a directory for your own slides under
+   <strong>AC-2019</strong>. You can copy the
+   <strong>Overview.html</strong> file there as a starting point, or
+   just use it as an example. If you make any images, put them in that
+   directory as well.</p>
+
+   <p>If you are able to upload your slides, put your directory with
+   all that it contains under <a
+   href="https://www.w3.org/2019/Talks/ac-slides/"
+   >https://www.w3.org/2019/Talks/ac-slides/</a>. There is no need to
+   upload the <strong>template</strong> directory. It is is already
+   there.</p>
+   
+   <h2>Writing slides</h2>
+
+   <h3>Slides</h3>
+
+   <p>Each slide is a <strong>div</strong> element<sup><a
+   href="#note1">*</a></sup> with a class of
+   <strong>slide</strong>:</p>
+
+   <pre>&lt;div class="slide">
+  ... slide content here...
+&lt;/div></pre>
+
+    <p>Inside the slides, use normal HTML elements (<strong>p, ul,
+    em,</strong> etc.).</p>
+
+    <p class="note" id="note1">*) Note for advanced users: Although
+    not shown in this template, it is in fact possible to use other
+    elements than <strong>div</strong>. One common choice is
+    <strong>section.</strong></p>
+
+    <h3>Slide numbers</h3>
+
+    <p>If a slide should <em>not</em> show the slide number, add the
+    class <strong>clear</strong>:</p>
+
+    <pre>&lt;div class="slide clear">
+  ... slide content here...
+&lt;/div></pre>
+
+    <h3>Title slides (cover slides)</h3>
+
+    <p>For cover slides (the title slide or separator slides between
+    parts of a presentation), add a class <strong>cover</strong>. You
+    can combine <strong>cover</strong> and
+    <strong>clear</strong>. E.g.:</p>
+
+    <pre>&lt;div class="slide cover clear">
+  &lt;h1>My presentations&lt;h1>
+  &lt;address>Peter W. Slidemaker&lt;/address>
+&lt;/div></pre>
+
+    <h3>Illustrations on the left or right</h3>
+
+    <p>Slides with narrower text and an illustration on the left can
+    be made by adding the class <strong>side</strong> to the slide. Inside the
+    slide there should be exactly one element that also has a class of
+    <strong>side</strong> (an image or some other element):</p>
+
+    <pre>&lt;div class="slide side">
+  &lt;img src="..." alt="..." class="side">
+  ... slide content here...
+&lt;/div></pre>
+
+    <p>The side element will occupy the left <span
+    class="num">1/3</span> of the slide and the rest of the content
+    the right <span class="num">2/3</span>.</p>
+
+    <p>To put the image on the right instead, add class
+    <strong>right</strong> (which may be abbreviated to
+    <strong>r</strong>):</p>
+
+    <pre>&lt;div class="slide side r">
+  &lt;img src="..." alt="..." class="side">
+  ... slide content here...
+&lt;/div></pre>
+
+    <h3>Automatic slide shows</h3>
+
+    <p>Slides can be made to advance automatically after a given time,
+    by setting a <strong>data-timing</strong> attribute on them with a
+    value of <var>MM:SS</var> (minutes and seconds). E.g.,</p>
+
+    <pre>&lt;div class="slide" data-timing="1:03"></pre>
+
+    <p>This slide will remain on screen no longer than 1 minute and 3
+    seconds, after which the next slide will be shown.</p>
+
+    <h3>Progress bar</h3>
+
+    <p>If you want a progress bar during the slide presentation, add
+    an empty <strong>div</strong> with a class of
+    <strong>progress</strong>. It can be put before the first slide or
+    after the last, but there should be at most one such element in
+    the file:</p>
+
+    <pre>&lt;div class="progress">&lt;/div></pre>
+
+    <p>The progress bar will show as a thin red line along the top of
+    the slides. Its length increases from zero on the first slide to
+    100% on the last.</p>
+
+    <h3>Incremental display</h3>
+
+    <p>To progressively reveal elements on a slide, put a class of
+    <strong>next</strong> on all elements that should not be visible
+    right away. They will become visible one by one as you press the
+    spacebar or an arrow key. E.g.:</p>
+
+    <pre>&lt;ul>
+  &lt;li>This item is visible when the slide appears&lt;/li>
+  &lt;li class="next">This item is not immediately visible&lt;/li>
+  &lt;li class="next">This is the third item to appear&lt;/li>
+&lt;/ul>
+&lt;p class="next">This is the last element to appear&lt;/p></pre>
+
+    <h3>Two columns</h3>
+
+    <p>To put elements side by side in two columns, make an element (a
+    <strong>div, ul</strong> or any other element) with class
+    <strong>columns</strong>. The first child of that element will be
+    put in the left column, the second child in the right column. If
+    there are more children, the third will be in the left column
+    again, the fourth in the right, etc.</p>
+
+    <pre>&lt;ul class="columns">
+  &lt;li>First goes on the left&lt;/li>
+  &lt;li>Second goes on the right&lt;/li>
+&lt;/ul></pre>
+
+    <h3>Small text</h3>
+
+    <p>Less important text can be shown in a smaller font by giving it
+    a class of <strong>note</strong>:</p>
+
+    <pre>&lt;p class="note">Note that this is harder to read&lt;/p></pre>
+
+    <h3>Automatic line numbering</h3>
+
+    <p>Pre-formatted text (in a <strong>pre</strong>) can be given
+    line numbers by adding the class <strong>numbered</strong>:</p>
+
+    <pre>&lt;pre class="numbered"></pre>
+
+    <p>No more than 20 lines will be numbered. (In the normal font
+    size, a slide fits 13 lines.)</p>
+
+    <h3>3×3 Grid</h3>
+
+    <p>It is possible to treat the slide as a 3×3 grid and put
+    elements in the four corners, in the middle of each edge, or in
+    the center of the slide. This is done by giving the elements a
+    class of <strong>place</strong>. On its own,
+    <strong>place</strong> puts the element in the center. By adding
+    classes <strong>top, right, bottom</strong> and
+    <strong>left</strong> the element can be placed in one of the
+    eight other positions.</p>
+
+    <pre>&lt;div class="place">Put this in the center&lt;/div>
+&lt;div class="place bottom">Put this bottom center&lt;/div>
+&lt;div class="place top right">In the top right corner&lt;/div></pre>
+
+    <p>The direction classes can also be abbreviated to <strong>t, r,
+    b</strong> and <strong>l</strong>.</p>
+
+    <h3>Image overlays (background images)</h3>
+
+    <p>To put an image behind the text of a slide, use an
+    <strong>img</strong> with a class of <strong>cover</strong>:</p>
+
+    <pre>&lt;img class="cover" src="..." alt="..."></pre>
+
+    <p>The image will be stretched to fill the whole of the text area.
+    If the image doesn't fit exactly (wrong aspect ratio), the image
+    will be cropped.</p>
+
+    <p>With a class of <strong>fit</strong> instead of
+    <strong>cover</strong>, the image will be scaled but without
+    cropping. Instead there may be white bands on the sides or
+    above/below the image, if it doesn't fit exactly.</p>
+
+    <pre>&lt;img class="fit" src="..." alt="..."></pre>
+
+    <p>This works both for normal slides and title slides (slides with
+    a class of <strong>cover</strong>). The logo on the right is not
+    obscured by the image.</p>
+
+    <h3>Slide transitions</h3>
+
+    <p>By default, each slide just replaces the previous one, but
+    there are several predefined slide transitions. You can set a
+    transition on the <strong>body</strong> element to apply it to all
+    slides:</p>
+
+    <pre>&lt;body class="shower fade-in"&gt;</pre>
+
+    <p>Or you can set it on individual slides, to apply only to the
+    transition between that slide and the next. (I.e., it doesn't
+    determine how the slide appears, but how it
+    <em>disappears.</em>)</p>
+
+    <pre>&lt;div class="slide wipe-left"&gt;</pre>
+
+    <p>You can set both a global transition and local ones. The global
+    transition applies to slides that do not have an explicit
+    transition set locally.</p>
+
+    <dl>
+     <dt>fade-in</dt>
+     <dd>The new slide appears faint at first and gets more opaque
+     until it completely obscures the previous slide.</dd>
+
+     <dt>slide-in</dt>
+     <dd>The new slide moves in from the left, while the previous
+     slide moves back to the left.</dd>
+
+     <dt>move-left</dt>
+     <dd>The new slides move in from the right while the old slide
+     moves out to the left.</dd>
+
+     <dt>move-up</dt>
+     <dd>The old slide moves up and the new slide moves in from the
+     bottom.</dd>
+
+     <dt>flip-up</dt>
+     <dd>A 3D effect: the bottom of the old slide is lifted up and the
+     slide is turned over to reveal the new slide on its back
+     side.</dd>
+
+     <dt>flip-left</dt>
+     <dd>Another 3D effect, but in this case the right side of the
+     slide is lifted up and the slide is flipped over to the left,
+     revealing the new slide on the back side.</dd>
+
+     <dt>center-out</dt>
+     <dd>A small circle appears in the middle of the old slide that
+     reveals the new slide. The circle grows until it covers the whole
+     slide.</dd>
+
+     <dt>wipe-left</dt>
+     <dd>The new slide moves in from the right, until it covers the
+     old slide.</dd>
+
+     <dt>zigzag-left</dt>
+     <dd>A zigzag pattern moves in from the right. To the left is the
+     old slide, to the right the new one.</dd>
+
+     <dt>zigzag-right</dt>
+     <dd>A zigzag pattern moves in from the left. To the left is the
+     new slide, to the right the old one.</dd>
+
+     <dt>cut-in</dt>
+     <dd>The new slide moves in from the top left and covers the old
+     slide.</dd>
+    </dl>
+
+    <h2>Presenting</h2>
+
+    <p>To present the slides, load them into a browser that supports
+    JavaScript and CSS and then click on the first slide.</p>
+
+    <p>Navigate though the slides by pressing the spacebar, the arrow
+    keys or Page-up/Page-Down. The Home and End keys jump to the
+    first, resp. last slide.</p>
+
+    <p>To exit the presentation, press the Esc key.</p>
+
+    <p>The complete <a
+    href="https://github.com/shower/shower/blob/master/docs/shortcuts.md"
+    >list of key strokes</a> is in the Shower documentation.</p>
+  </div>
+
+  <div class="comment">
+   <address>Created 4 March 2019 by <a
+   href="mailto:bert@w3.org">Bert Bos</a>. Last modified
+   $Date: 2019/03/13 14:24:28 $ by $Author: bbos $.</address>
+  </div>
+ </body>
+</html>
